@@ -1,0 +1,80 @@
+1024
+m = 1024, n = 1024.
+Testing cuBLAS SGEMV.
+Average elasped time: 0.000023 second, performance: 92.748374 GFLOPS.
+2048
+m = 2048, n = 2048.
+Testing cuBLAS SGEMV.
+Average elasped time: 0.000045 second, performance: 188.430129 GFLOPS.
+3072
+m = 3072, n = 3072.
+Testing cuBLAS SGEMV.
+Average elasped time: 0.000089 second, performance: 213.148307 GFLOPS.
+4096
+m = 4096, n = 4096.
+Testing cuBLAS SGEMV.
+Average elasped time: 0.000151 second, performance: 222.608694 GFLOPS.
+5120
+m = 5120, n = 5120.
+Testing cuBLAS SGEMV.
+Average elasped time: 0.000231 second, performance: 226.479771 GFLOPS.
+6144
+m = 6144, n = 6144.
+Testing cuBLAS SGEMV.
+Average elasped time: 0.000334 second, performance: 225.942931 GFLOPS.
+7168
+m = 7168, n = 7168.
+Testing cuBLAS SGEMV.
+Average elasped time: 0.000446 second, performance: 230.641236 GFLOPS.
+8192
+m = 8192, n = 8192.
+Testing cuBLAS SGEMV.
+Average elasped time: 0.000584 second, performance: 229.998779 GFLOPS.
+9216
+m = 9216, n = 9216.
+Testing cuBLAS SGEMV.
+Average elasped time: 0.000734 second, performance: 231.452795 GFLOPS.
+10240
+m = 10240, n = 10240.
+Testing cuBLAS SGEMV.
+Average elasped time: 0.000942 second, performance: 222.613251 GFLOPS.
+11264
+m = 11264, n = 11264.
+Testing cuBLAS SGEMV.
+Average elasped time: 0.001092 second, performance: 232.397162 GFLOPS.
+12288
+m = 12288, n = 12288.
+Testing cuBLAS SGEMV.
+Average elasped time: 0.001297 second, performance: 232.854761 GFLOPS.
+13312
+m = 13312, n = 13312.
+Testing cuBLAS SGEMV.
+Average elasped time: 0.001523 second, performance: 232.713581 GFLOPS.
+14336
+m = 14336, n = 14336.
+Testing cuBLAS SGEMV.
+Average elasped time: 0.001766 second, performance: 232.777040 GFLOPS.
+15360
+m = 15360, n = 15360.
+Testing cuBLAS SGEMV.
+Average elasped time: 0.002025 second, performance: 233.043576 GFLOPS.
+16384
+m = 16384, n = 16384.
+Testing cuBLAS SGEMV.
+Average elasped time: 0.002427 second, performance: 221.233742 GFLOPS.
+17408
+m = 17408, n = 17408.
+Testing cuBLAS SGEMV.
+Average elasped time: 0.002627 second, performance: 230.702112 GFLOPS.
+18432
+m = 18432, n = 18432.
+Testing cuBLAS SGEMV.
+Average elasped time: 0.002933 second, performance: 231.631049 GFLOPS.
+19456
+m = 19456, n = 19456.
+Testing cuBLAS SGEMV.
+Average elasped time: 0.003278 second, performance: 230.921391 GFLOPS.
+20480
+m = 20480, n = 20480.
+Testing cuBLAS SGEMV.
+Average elasped time: 0.003615 second, performance: 232.043336 GFLOPS.
