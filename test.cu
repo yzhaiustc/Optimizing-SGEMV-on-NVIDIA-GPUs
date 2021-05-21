@@ -58,23 +58,25 @@ int main(int argc, char *argv[])
     CUDA_CALLER(cudaMemcpy(dY_ref, hY_ref, sizeof(float) * m, cudaMemcpyHostToDevice));
     cublasHandle_t myHandle; cublasCreate(&myHandle);
 
-    printf("Start the sanity check...\n");
-    fflush(stdout);
-    mysgemv(m, n, alpha, dA, m, dX, beta, dY);
-    cublasSgemv(myHandle, CUBLAS_OP_N, m, n, &alpha, dA, m, dX, 1, &beta, dY_ref, 1);
-    
-    cudaDeviceSynchronize();
-    cudaMemcpy(hY, dY, sizeof(float)*m, cudaMemcpyDeviceToHost);
-    cudaMemcpy(hY_ref, dY_ref, sizeof(float)*m, cudaMemcpyDeviceToHost);
-    cudaDeviceSynchronize();
-    if (!verify_matrix(hY, hY_ref, m)){
-        printf("did not pass the sanity check, returned.\n");
-        exit(-2);
-    }else{
-        printf("Sanity check passed. Start performance benchmarking...\n");
+    if (kernel_num == 1){
+        printf("Start the sanity check...\n");
         fflush(stdout);
+        mysgemv(m, n, alpha, dA, m, dX, beta, dY);
+        cublasSgemv(myHandle, CUBLAS_OP_N, m, n, &alpha, dA, m, dX, 1, &beta, dY_ref, 1);
+        
+        cudaDeviceSynchronize();
+        cudaMemcpy(hY, dY, sizeof(float)*m, cudaMemcpyDeviceToHost);
+        cudaMemcpy(hY_ref, dY_ref, sizeof(float)*m, cudaMemcpyDeviceToHost);
+        cudaDeviceSynchronize();
+        if (!verify_matrix(hY, hY_ref, m)){
+            printf("did not pass the sanity check, returned.\n");
+            exit(-2);
+        }else{
+            printf("Sanity check passed. Start performance benchmarking...\n");
+            fflush(stdout);
+        }
     }
-    
+
     cudaDeviceSynchronize();
     cudaEventRecord(beg);
     if (kernel_num == 1){
